@@ -72,8 +72,8 @@ function appendCards() {
 }
 
 function makeCard(quote) {
-   document.querySelector('.main-content').insertAdjacentHTML('afterbegin',`<div class='idea-card' id=${quote.id}>
-    <h4>${quote.title}</h4>
-    <p>${quote.description}</p>
+   document.querySelector('.main-content').insertAdjacentHTML('afterbegin',`<div class='quote-card' id=${quote.id}>
+    <h4 class='quote-title'>${quote.title}</h4>
+    <p class='quote-content>${quote.description}</p>
 </div>`)
 }

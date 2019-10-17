@@ -1,3 +1,30 @@
 body {
     font-family: 'Montserrat Alternates', sans-serif;
 }
+
+.quote-title {
+    padding: 10px;
+}
+
+.quote-content {
+    padding: 10px;
+}
+
+.quote-card {
+    border: 5px solid black;
+    display: flex;
+    width: 231px;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    height: 300px;
+    background: #aeebcc;
+    align-items: center;
+    border: 5px solid #aeebcc;
+    display: flex;
+}
