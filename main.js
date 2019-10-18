@@ -9,6 +9,7 @@ var submitBtn = document.querySelector('.form-submit-btn')
 
 checkStorage();
 appendCards();
+console.log('quotes', quotes)
 
 submitBtn.addEventListener('click', createNewQuote)
 
@@ -73,7 +74,7 @@ function appendCards() {
 
 function makeCard(quote) {
    document.querySelector('.main-content').insertAdjacentHTML('afterbegin',`<div class='quote-card' id=${quote.id}>
-    <h4 class='quote-title'>${quote.title}</h4>
-    <p class='quote-content>${quote.description}</p>
+    <h4 class='quote-title'><span>On...</span> <br />${quote.title}</h4>
+    <p>${quote.description}</p>
 </div>`)
 }

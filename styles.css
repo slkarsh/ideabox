@@ -2,23 +2,45 @@ body {
     font-family: 'Montserrat Alternates', sans-serif;
 }
 
-.quote-title {
-    padding: 10px;
+button {
+    height: 80px;
 }
 
-.quote-content {
+.form-title-input {
+    height: 30px;
+}
+
+.form-description-input {
+    height: 150px;
+}
+
+form {
+    margin: auto;
+    width: 70%;
+}
+
+.quote-title {
+    padding: 10px;
+    border-right: 1px solid black;
+    font-size: 1.3em;
+}
+
+p {
     padding: 10px;
 }
 
 .quote-card {
     border: 5px solid black;
     display: flex;
-    width: 231px;
+    width: 265px;
 }
 
 .main-content {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-gap: 20px 15px;
+    padding: 20px 0px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 0.3fr));
+    overflow: scroll;
 }
 
 header {
@@ -27,4 +49,16 @@ header {
     align-items: center;
     border: 5px solid #aeebcc;
     display: flex;
+}
+
+.header-content-holder {
+    border: 1px solid red;
+    height: 200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+span {
+    font-weight: 300;
 }
