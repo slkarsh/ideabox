@@ -8,4 +8,9 @@ class Quote {
     saveToStorage(quotes) {
         localStorage.setItem("quoteKey", JSON.stringify(quotes))
     }
+
+    deleteFromStorage(index, quotes) {
+        quotes.splice(index, 1)
+        this.saveToStorage(quotes)
+    }
 }

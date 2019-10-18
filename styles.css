@@ -20,7 +20,7 @@ form {
 }
 
 .quote-title {
-    padding: 10px;
+    padding: 5px;
     border-right: 1px solid black;
     font-size: 1.3em;
 }
@@ -62,3 +62,13 @@ header {
 span {
     font-weight: 300;
 }
+
+.delete-div {
+    height: 18px;
+    float: right;
+    padding: 3px;
+}
+
+/* .delete-div:hover {
+    cursor: pointer;
+} */

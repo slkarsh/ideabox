@@ -1,4 +1,4 @@
-// var main = document.querySelector('main')
+var main = document.querySelector('main')
 // var title = document.querySelector('.form-title-input')
 // var description = document.querySelector('.form-description-input')
 var quotes = [];
@@ -12,6 +12,8 @@ appendCards();
 console.log('quotes', quotes)
 
 submitBtn.addEventListener('click', createNewQuote)
+main.addEventListener('click', removeCard);
+
 
 
 // console.log(quoteInst)
@@ -56,24 +58,30 @@ function checkStorage() {
     }
 }
 
-// function checkStorage() {
-//     if (JSON.parse(localStorage.getItem("quoteKey")) === null) {
-//         quotes=[]
-//     } else {
-//         quotes = JSON.parse(localStorage.getItem("quoteKey")).map(function(element) {
-//             return new Quote(element)
-//         })
-//     }
-// }
-
 function appendCards() {
 	for (var i = 0; i < quotes.length; i++) {
 		makeCard(quotes[i]);
 	}
 }
 
+function getIndex(e) {
+    let card = e.target.closest('.quote-card');
+    let cardId = parseInt(card.dataset.id);
+    let cardIndex = quotes.findIndex(quote => quote.id === cardId)
+    return cardIndex
+}
+
+function removeCard(e) {
+    console.log('click')
+    let targetCard = e.target.closest('.quote-card');
+    let index = getIndex(e);
+    targetCard.remove();
+    return quotes[index].deleteFromStorage(index, quotes)
+}
+
 function makeCard(quote) {
-   document.querySelector('.main-content').insertAdjacentHTML('afterbegin',`<div class='quote-card' id=${quote.id}>
+   document.querySelector('.main-content').insertAdjacentHTML('afterbegin',`<div class='quote-card' data-id=${quote.id}>
+   <div class='delete-div'>X</div>
     <h4 class='quote-title'><span>On...</span> <br />${quote.title}</h4>
     <p>${quote.description}</p>
 </div>`)
