@@ -4,14 +4,22 @@ body {
 
 button {
     height: 80px;
+    font-size: 1em;
+    margin-top: 15px;
 }
 
 .form-title-input {
     height: 30px;
+    font-size: 1em;
 }
 
 .form-description-input {
     height: 150px;
+    font-size: 1em;
+}
+
+label {
+    font-size: 1.2em
 }
 
 form {
@@ -52,11 +60,11 @@ header {
 }
 
 .header-content-holder {
-    border: 1px solid red;
     height: 200px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
+    width: 60%;
 }
 
 span {
