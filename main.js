@@ -1,11 +1,6 @@
 var main = document.querySelector('main')
-// var title = document.querySelector('.form-title-input')
-// var description = document.querySelector('.form-description-input')
 var quotes = [];
 var submitBtn = document.querySelector('.form-submit-btn')
-
-
-
 
 checkStorage();
 appendCards();
@@ -13,10 +8,6 @@ console.log('quotes', quotes)
 
 submitBtn.addEventListener('click', createNewQuote)
 main.addEventListener('click', removeCard);
-
-
-
-// console.log(quoteInst)
 
 function createNewQuote(e) {
     e.preventDefault();
